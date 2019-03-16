@@ -54,40 +54,45 @@
         -webkit-align-items: center;
         align-items: center;
     }
-    #cover_1{width:100%;height:100%;background-image:url('static/img/cover1.jpg');
+    #cover-1{width:100%;height:100%;background-image:url('static/img/cover1.jpg');
                        background-repeat:no-repeat;
                        background-size:cover;}
-    #page1_center{z-index:11;position:absolute;top:50%;left:50%;margin-left:-300px;margin-top:-120px;
-    width: 600px;height: 240;}
-    
-    #cover_2{width:100%;height:100%;background-image:url('static/img/cover2.jpg');
+    #page1-center{z-index:11;position:absolute;top:50%;left:50%;margin-left:-400px;margin-top:-180px;
+    width: 800px;height: 360;}
+    #page1-title{color:white;font-size: 60px;background: rgba(0, 0, 0, 0.1);}
+    #page1-content{color:black;font-size: 22px;background: rgba(255, 255, 255, 0.3);}
+    .tag{top:20px;left:20px;position: relative;width:245px;height:70px;float:left;font-size: 50px;}
+    .tag-white{color: white;}
+    .tag img{width:245px;height:70px;}
+
+    #cover-2{width:100%;height:100%;background-image:url('static/img/cover2.jpg');
                        background-repeat:no-repeat;
                        background-size:cover;}
-    #page2_center{z-index:11;position:absolute;top:50%;left:50%;margin-left:-300px;margin-top:-120px;
+    #page2-center{z-index:11;position:absolute;top:50%;left:50%;margin-left:-300px;margin-top:-120px;
     width: 600px;height: 240;}
 
-    #cover_3{width:100%;height:100%;background-image:url('static/img/cover3.jpg');
+    #cover-3{width:100%;height:100%;background-image:url('static/img/cover3.jpg');
                        background-repeat:no-repeat;
                        background-size:cover;}
-    #page3_center{z-index:11;position:absolute;top:50%;left:50%;margin-left:-500px;margin-top:-120px;
-    width: 1000px;height: 240;}
-    #page3_bar{background-color:black;padding:15px;color:white;}
-    .page3_group{margin-top:10px;}
-    .page3_img img{margin:10px;width: 240px;height: 160px;}
-    .page3_img:hover{background-color:gray;cursor:pointer;}
+    #page3-center{z-index:11;position:absolute;top:50%;left:50%;margin-left:-500px;margin-top:-180px;
+    width: 1000px;height: 360;}
+    #page3-bar{background-color:black;padding:15px;color:white;}
+    .page3-group{margin-top:10px;}
+    .page3-img img{margin:10px;width: 240px;height: 160px;}
+    .page3-img img:hover{background-color:gray;cursor:pointer;width: 300px;height: 200px;}
 
-    #cover_4{width:100%;height:100%;background-image:url('static/img/cover4.jpg');
+    #cover-4{width:100%;height:100%;background-image:url('static/img/cover4.jpg');
                        background-repeat:no-repeat;
                        background-size:cover;}
-    #page4_center{z-index:11;position:absolute;top:50%;left:50%;margin-left:-300px;margin-top:-120px;
+    #page4-center{z-index:11;position:absolute;top:50%;left:50%;margin-left:-300px;margin-top:-120px;
     width: 600px;height: 240;}
     
-    #cover_5{width:100%;height:100%;background-image:url('static/img/cover5.jpg');
+    #cover-5{width:100%;height:100%;background-image:url('static/img/cover5.jpg');
                        background-repeat:no-repeat;
                        background-size:cover;}
-    #page5_center{z-index:11;position:absolute;top:50%;left:50%;margin-left:-300px;margin-top:-120px;
-    width: 600px;height: 240;}
-    #page5_top{position:absolute;bottom:100px;right:20px;cursor:pointer;}
+    #page5-center{z-index:11;position:absolute;top:50%;left:50%;margin-left:-330px;margin-top:-100px;
+    width: 660px;height: 200;text-align: left;}
+    #page5-top{position:absolute;bottom:60px;right:20px;cursor:pointer;}
     </style>
 </head>
 
@@ -97,13 +102,14 @@
         <div class="swiper-wrapper">
             <!--Page1开始-->
             <div class="swiper-slide">
-                <div id="cover_1">
-                    <div id="page1_center">
+                <div id="cover-1">
+                    <div class="tag"><img src="static/img/logo.png"/></div>
+                    <div id="page1-center">
                         <div>
-                            <h1>Welcome to Mobius</h1>
+                            <p id="page1-title">Welcome to Mobius</p>
                         </div>
                         <div>
-                            <p>Mobius is a mobile performance advertising company,specializing in 
+                            <p id="page1-content">Mobius is a mobile performance advertising company,specializing in 
                                 mobile advertising and monetizing driven by the big data technology innovation.
                             </p>
                         </div>
@@ -113,8 +119,9 @@
             <!--Page1结束-->
 
             <div class="swiper-slide">
-                <div id="cover_2">
-                    <div id="page2_center">
+                <div id="cover-2">
+                    <div class="tag">About us</div>
+                    <div id="page2-center">
                         <span>
                             <div>Your Best user acquisition Partner</div>
                             <div> · Cooperate with 500+ global partners, </div>
@@ -132,9 +139,10 @@
             </div>
 
             <div class="swiper-slide">
-                <div id="cover_3">
-                    <div id="page3_center">
-                        <div id="page3_bar">
+                <div id="cover-3">
+                    <div class="tag">Advertiser</div>
+                    <div id="page3-center">
+                        <div id="page3-bar">
                             <div>Advertiser</div>
                             <div>Start earning more today by tapping into the 10,000+ current campaigns 
                                 available. No matter what verticals your traffic come from, we can provide 
@@ -142,25 +150,25 @@
                             </div>
                         </div>
                         <div>
-                            <span class="page3_title">Gaming</span>
-                            <span class="page3_title">E-commerce</span>
-                            <span class="page3_title">Entertainment</span>
+                            <span class="page3-title">Gaming</span>
+                            <span class="page3-title">E-commerce</span>
+                            <span class="page3-title">Entertainment</span>
                         </div>
-                        <div class="page3_group">
-                            <span class="page3_img" id="page3_1">
+                        <div class="page3-group">
+                            <span class="page3-img" id="page3-1">
                                 <img src="static/img/game.jpg"/>
                             </span>
-                            <span class="page3_img" id="page3_2">
+                            <span class="page3-img" id="page3-2">
                                 <img src="static/img/e-commerce.jpg"/>
                             </span>
-                            <span class="page3_img" id="page3_3">
+                            <span class="page3-img" id="page3-3">
                                 <img src="static/img/entertainment.jpg"/>
                             </span>
                         </div>
 
                     </div>
-                    <div id="page3_text">
-                        <img src="static/img/page3_text.png"/>
+                    <div id="page3-text">
+                        <img src="static/img/page3-text.png"/>
                     </div>
 
                 </div>
@@ -169,8 +177,9 @@
 
              <!--Page4开始-->
             <div class="swiper-slide">
-                <div id="cover_4">
-                    <div id="page4_center">
+                <div id="cover-4">
+                    <div class="tag">Publishers</div>
+                    <div id="page4-center">
                         <div>
                              <h1>Our clients value us because of our trusted traffic、
                                 advanced technology and professional operation strategy.
@@ -189,17 +198,18 @@
 
             <!--Page5开始-->
             <div class="swiper-slide">
-                <div id="cover_5">
-                    <div id="page5_center">
+                <div id="cover-5">
+                    <div class="tag tag-white">Contact us</div>
+                    <div id="page5-center">
                         <div>
-                            <h1>Address:RM4, 16/F, HO KING COMM CTR, 2-16 FAYUEN ST, MONGKOK KOWLOON, HONG KONG<br/>
-                                Skype:support@mobius.net<br/>
-                                Email:support@mobius.net
+                            <h1>Address : RM4, 16/F, HO KING COMM CTR, 2-16 FAYUEN ST, MONGKOK KOWLOON, HONG KONG<br/>
+                                Skype : support@mobius.net<br/>
+                                Email : support@mobius.net
                             </h1>
                         </div>
                     </div>
-                    <div id="page5_top">
-                        <img onclick="javascript:swiper.slideTo(0, 1000, false);" src="static/img/page5_top.png"/>
+                    <div id="page5-top">
+                        <img onclick="javascript:swiper.slideTo(0, 1000, false);" src="static/img/page5-top.png"/>
                     </div>
                 </div>
             </div>
@@ -220,8 +230,8 @@
     var initHeight = document.body.clientHeight;
 
     $(document).ready(function(){
-        //$("#page1_phone").animate({top:"130px"},2000);
-        $("#page1_text").fadeIn(2500);
+        //$("#page1-phone").animate({top:"130px"},2000);
+        $("#page1-text").fadeIn(2500);
     });
 
     var swiper = new Swiper('.swiper-container', {
@@ -233,20 +243,20 @@
         mousewheelControl: true,
         onSlideChangeStart: function(swiper){
            switch(swiper.activeIndex){
-            case 1:$("#page2_hand").animate({top:"100px",left:"250px"},2000);
-                   $("#page2_nfc").fadeIn(2500);
-                   $("#page2_scancode").fadeIn(2500);
-                   $("#page2_text").fadeIn(3000);
+            case 1:$("#page2-hand").animate({top:"100px",left:"250px"},2000);
+                   $("#page2-nfc").fadeIn(2500);
+                   $("#page2-scancode").fadeIn(2500);
+                   $("#page2-text").fadeIn(3000);
                    break;
-            case 2:$("#page3_imgs").fadeIn(2500);
-                   $("#page3_text").fadeIn(3000);
+            case 2:$("#page3-imgs").fadeIn(2500);
+                   $("#page3-text").fadeIn(3000);
                    break;
-            case 3:$("#page4_phone").animate({top:"10px",left:"120px"},2000);
-                   $("#page4_text").fadeIn(3000);
+            case 3:$("#page4-phone").animate({top:"10px",left:"120px"},2000);
+                   $("#page4-text").fadeIn(3000);
                    break;
-            case 4:$("#page5_pc").fadeIn(1500);
-                   $("#page5_text").fadeIn(1000);
-                   $("#page5_text").animate({top:"100px"},2000);
+            case 4:$("#page5-pc").fadeIn(1500);
+                   $("#page5-text").fadeIn(1000);
+                   $("#page5-text").animate({top:"100px"},2000);
                    break;
             case 5:back2top();break;
             default:
@@ -255,11 +265,11 @@
     });
 
     function back2top(){
-        $("#page5_top").animate({bottom:"40px"},1000,back2top_recover);
+        $("#page5-top").animate({bottom:"40px"},1000,back2top_recover);
     }
 
     function back2top_recover(){
-        $("#page5_top").animate({bottom:"60px"},1000,back2top);
+        $("#page5-top").animate({bottom:"60px"},1000,back2top);
     }
 
     window.onresize = function () {
