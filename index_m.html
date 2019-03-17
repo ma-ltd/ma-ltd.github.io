@@ -57,40 +57,56 @@
     #cover-1{width:100%;height:100%;background-image:url('static/img/cover1.jpg');
                        background-repeat:no-repeat;
                        background-size:cover;}
-    #page1-center{z-index:11;position:absolute;top:100px;left:20px;text-align:left;}
-    #page1-title{width:580px;color:white;font-size: 60px;}
-    #page1-content{width:480px;padding:20px;color:black;font-size: 22px;background: rgba(255, 255, 255, 0.3);}
-    .tag{top:20px;left:20px;position: relative;width:245px;height:70px;float:left;font-size: 50px;}
+    #cover-1-mask{position:relative;z-index:10;width:100%;height:100%;background: rgba(0, 0, 0, 0.1);}
+    #page1-center{z-index:11;position:absolute;top:50%;left:50%;margin-left:-400px;margin-top:-200px;
+    width: 800px;height: 400;}
+    #page1-title{color:white;font-size: 66px;margin:50px;}
+    #page1-content{padding:30px;color:black;font-size: 22px;background: rgba(255, 255, 255, 0.5);}
+    #page1-content:hover{background: rgba(255, 255, 255, 0.8);}
+    .tag{z-index:13;top:20px;left:20px;position: relative;width:245px;height:70px;float:left;font-size: 50px;}
     .tag-white{color: white;}
     .tag img{width:245px;height:70px;}
 
     #cover-2{width:100%;height:100%;background-image:url('static/img/cover2.jpg');
                        background-repeat:no-repeat;
                        background-size:cover;}
-    #page2-center{z-index:11;position:absolute;top:50%;left:50%;margin-left:-300px;margin-top:-120px;
-    width: 600px;height: 240;}
+    #page2-center{z-index:11;position:absolute;top:50%;left:50%;margin-left:-550px;margin-top:-120px;
+    width: 1100px;height: 240px;}
+    .page2-block{padding:20px;text-align:left;float:left;width:480px;height:240px;background:rgba(255, 255, 255, 0.8);}
+    .page2-block:hover{background: rgba(255, 255, 255, 0.95);}
+    #page2-left{float:left;}
+    #page2-right{float:right;}
+    .page2-title{font-size: 24px;font-weight: bold;margin:10px 0 20px 0;color:#4d77bd;}
+    .page2-content{margin: 20px;}
+
 
     #cover-3{width:100%;height:100%;background-image:url('static/img/cover3.jpg');
                        background-repeat:no-repeat;
                        background-size:cover;}
-    #page3-center{z-index:11;position:absolute;top:50%;left:50%;margin-left:-500px;margin-top:-180px;
-    width: 1000px;height: 360;}
-    #page3-bar{background-color:black;padding:15px;color:white;}
-    .page3-group{margin-top:10px;}
-    .page3-img img{margin:10px;width: 240px;height: 160px;}
-    .page3-img img:hover{background-color:gray;cursor:pointer;width: 300px;height: 200px;}
+    #page3-center{z-index:11;position:absolute;top:50%;left:50%;margin-left:-540px;margin-top:-180px;
+    width: 1080px;height: 360px;}
+    #page3-bar{background: rgba(255, 255, 255, 0.5);padding:15px;text-align: left;margin: 20px;}
+    #page3-bar:hover{background: rgba(255, 255, 255, 0.8);}
+    .page3-block{float:left;width:350px;margin: 0 5px 0 5px;}
+    .page3-title{font-size: 22px;font-weight: bold;}
+    .page3-img img{margin:10px;width: 330px;height: 220px;}
+    .page3-img img:hover{background-color:gray;cursor:pointer;width: 360px;height: 240px;}
 
     #cover-4{width:100%;height:100%;background-image:url('static/img/cover4.jpg');
                        background-repeat:no-repeat;
                        background-size:cover;}
-    #page4-center{z-index:11;position:absolute;top:50%;left:50%;margin-left:-300px;margin-top:-120px;
-    width: 600px;height: 240;}
-    
+    #page4-center{z-index:11;position:absolute;top:50%;left:50%;margin-left:-540px;margin-top:-180px;
+    width: 1080px;height: 360px;}
+    #page4-bar{background: rgba(255, 255, 255, 0.5);padding:15px;text-align: left;margin: 20px;}
+    #page4-bar:hover{background: rgba(255, 255, 255, 0.8);}
+    .page4-block{float:left;width:350px;margin: 0 5px 0 5px;}
+    .page4-title{font-size: 22px;font-weight: bold;}
+    .page4-img img{margin:10px;width: 330px;height: 220px;}
+    .page4-img img:hover{background-color:gray;cursor:pointer;width: 360px;height: 240px;}
+
     #cover-5{width:100%;height:100%;background-image:url('static/img/cover5.jpg');
                        background-repeat:no-repeat;
                        background-size:cover;}
-    #page5-center{z-index:11;position:absolute;top:50%;left:50%;margin-left:-330px;margin-top:-100px;
-    width: 660px;height: 200;text-align: left;}
     #page5-top{position:absolute;bottom:60px;right:20px;cursor:pointer;}
     </style>
 </head>
@@ -103,14 +119,15 @@
             <div class="swiper-slide">
                 <div id="cover-1">
                     <div class="tag"><img src="static/img/logo.png"/></div>
+                    <div id="cover-1-mask"></div>
                     <div id="page1-center">
                         <div>
-                            <p id="page1-title">Welcome to Mobius</p>
+                            <div id="page1-title">Welcome to Mobius</div>
                         </div>
                         <div>
-                            <p id="page1-content">Mobius is a mobile performance advertising company,specializing in 
+                            <div id="page1-content">Mobius is a mobile performance advertising company, specializing in 
                                 mobile advertising and monetizing driven by the big data technology innovation.
-                            </p>
+                            </div>
                         </div>
                     </div>
                </div>
@@ -121,18 +138,18 @@
                 <div id="cover-2">
                     <div class="tag">About us</div>
                     <div id="page2-center">
-                        <span>
-                            <div>Your Best user acquisition Partner</div>
-                            <div> · Cooperate with 500+ global partners, </div>
-                            <div> · Cover 200+ countries and regions,</div>
-                            <div> · Achieve 10,000,000+ clicks and over 10,000 conversions daily. </div>
-                        </span>
-                        <span>
-                            <div>Your Most Efficient Monetization Platform</div>
-                            <div> · 10000+ selective offers，20% are exclusive or direct offers</div>
-                            <div> · Support both S2S and API integration with professional account managers.</div>
-                            <div> · Frequent offer testing to eliminate stopped or dead campaigns</div>
-                        </span>
+                        <div class="page2-block" id="page2-left">
+                            <div class="page2-title">Your Best user acquisition Partner</div>
+                            <div class="page2-content"> · Cooperate with 500+ global partners, </div>
+                            <div class="page2-content"> · Cover 200+ countries and regions,</div>
+                            <div class="page2-content"> · Achieve 10,000,000+ clicks and over 10,000 conversions daily. </div>
+                        </div>
+                        <div class="page2-block" id="page2-right">
+                            <div class="page2-title">Your Most Efficient Monetization Platform</div>
+                            <div class="page2-content"> · 10000+ selective offers，20% are exclusive or direct offers</div>
+                            <div class="page2-content"> · Support both S2S and API integration with professional account managers.</div>
+                            <div class="page2-content"> · Frequent offer testing to eliminate stopped or dead campaigns</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -142,36 +159,33 @@
                     <div class="tag">Advertiser</div>
                     <div id="page3-center">
                         <div id="page3-bar">
-                            <div>Advertiser</div>
                             <div>Start earning more today by tapping into the 10,000+ current campaigns 
                                 available. No matter what verticals your traffic come from, we can provide 
                                 a selection of advertisers to suit your preferences to performance marketing.
                             </div>
                         </div>
                         <div>
-                            <span class="page3-title">Gaming</span>
-                            <span class="page3-title">E-commerce</span>
-                            <span class="page3-title">Entertainment</span>
+                            <div class="page3-block">
+                                <div class="page3-title">Gaming</div>
+                                <div class="page3-img">
+                                    <img src="static/img/game.jpg"/>
+                                </div>
+                            </div>
+                            <div class="page3-block">
+                                <div class="page3-title">E-commerce</div>
+                                <div class="page3-img">
+                                    <img src="static/img/e-commerce.jpg"/>
+                                </div>
+                            </div>
+                            <div class="page3-block">
+                                <div class="page3-title">Entertainment</div>
+                                <div class="page3-img">
+                                    <img src="static/img/entertainment.jpg"/>
+                                </div>
+                            </div>
                         </div>
-                        <div class="page3-group">
-                            <span class="page3-img" id="page3-1">
-                                <img src="static/img/game.jpg"/>
-                            </span>
-                            <span class="page3-img" id="page3-2">
-                                <img src="static/img/e-commerce.jpg"/>
-                            </span>
-                            <span class="page3-img" id="page3-3">
-                                <img src="static/img/entertainment.jpg"/>
-                            </span>
-                        </div>
-
                     </div>
-                    <div id="page3-text">
-                        <img src="static/img/page3-text.png"/>
-                    </div>
-
                 </div>
-
             </div>
 
              <!--Page4开始-->
@@ -179,16 +193,31 @@
                 <div id="cover-4">
                     <div class="tag">Publishers</div>
                     <div id="page4-center">
-                        <div>
-                             <h1>Our clients value us because of our trusted traffic、
+                        <div id="page4-bar">
+                            <div>Our clients value us because of our trusted traffic、
                                 advanced technology and professional operation strategy.
                                 Our AM will match the targeted traffic for you according to your demand.
-                            </h1>
+                            </div>
                         </div>
                         <div>
-                            <span>Affiliate Network</span>
-                            <span>DSP</span>
-                            <span>Media Buy</span>
+                            <div class="page4-block">
+                                <div class="page4-title">Affiliate Network</div>
+                                <div class="page4-img">
+                                    <img src="static/img/affiliate-network.jpg"/>
+                                </div>
+                            </div>
+                            <div class="page4-block">
+                                <div class="page4-title">DSP</div>
+                                <div class="page4-img">
+                                    <img src="static/img/dsp.jpg"/>
+                                </div>
+                            </div>
+                            <div class="page4-block">
+                                <div class="page4-title">Media Buy</div>
+                                <div class="page4-img">
+                                    <img src="static/img/mediabuy.jpg"/>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -199,14 +228,6 @@
             <div class="swiper-slide">
                 <div id="cover-5">
                     <div class="tag tag-white">Contact us</div>
-                    <div id="page5-center">
-                        <div>
-                            <h1>Address : RM4, 16/F, HO KING COMM CTR, 2-16 FAYUEN ST, MONGKOK KOWLOON, HONG KONG<br/>
-                                Skype : support@mobius.net<br/>
-                                Email : support@mobius.net
-                            </h1>
-                        </div>
-                    </div>
                     <div id="page5-top">
                         <img onclick="javascript:swiper.slideTo(0, 1000, false);" src="static/img/page5-top.png"/>
                     </div>
@@ -230,7 +251,7 @@
 
     $(document).ready(function(){
         //$("#page1-phone").animate({top:"130px"},2000);
-        $("#page1-text").fadeIn(2500);
+        $("#page1-title").fadeIn(25000);
     });
 
     var swiper = new Swiper('.swiper-container', {
